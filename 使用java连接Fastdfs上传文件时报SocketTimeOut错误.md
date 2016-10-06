@@ -1,7 +1,11 @@
 ###### 解决:使用java连接Fastdfs,上传文件时报:SocketTimeOutException的问题.
 检查配置文件，发现问题：
 在storage server的conf中,第23,24行是这个:
+
 `# the storage server port  port=23000`
+
+
+
 
 这毫无疑问代表了storage server自己的端口号,
 
@@ -12,6 +16,10 @@
 经过确认,的确如此,开启这个端口后,eclipse中上传文件正常! junit绿条!
 
 
+
+
+
+
 - 思考:
 为什么前三个端口号能意识到并手动开启,而这个端口,却在最后才想到?
 
@@ -20,6 +28,9 @@
 但是,第四个端口,在centOS和putty中,即使没开,也不影响上传图片或通过http访问图片的URL!
 
 导致自己很难想到这个本身就很简单的问题.
+
+
+
 
 端口查看及开启方式:
 1.编辑：
