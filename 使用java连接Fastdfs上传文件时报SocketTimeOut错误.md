@@ -22,6 +22,7 @@
 2.手动打开指定的端口(以23000 为例),添加如下代码:
 `-A INPUT -m state --state NEW -m tcp -p tcp --dport 23000 -j ACCEPT`
 `-A INPUT -m state --state NEW -m tcp -p tcp --dport 22122 -j ACCEPT`
+
 3.重启防火墙
 `[root@jing ~]# service iptables restart`
 
