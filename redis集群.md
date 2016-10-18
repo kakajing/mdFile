@@ -35,23 +35,23 @@
 `[root@jing redis-cluster]# mv redis redis01`
 
 
-	删除dump.rdb文件
-	
-	`[root@jing redis01]# rm dump.rdb`
-	
-	修改redis.conf文件
-	
-	` #cluster-enabled yes`去掉#号
-	
-	`port 7001`修改端口
-	
-	复制6个redis实例
-	
-	`[root@jing redis-cluster]# cp -r redis01/ redis02`
-	~
-	`[root@jing redis-cluster]# cp -r redis01/ redis06`
-	
-	修改各实例的端口
+删除dump.rdb文件
+
+`[root@jing redis01]# rm dump.rdb`
+
+修改redis.conf文件
+
+` #cluster-enabled yes`去掉#号
+
+`port 7001`修改端口
+
+复制6个redis实例
+
+`[root@jing redis-cluster]# cp -r redis01/ redis02`
+~
+`[root@jing redis-cluster]# cp -r redis01/ redis06`
+
+修改各实例的端口
 
 
 - 需要一个ruby脚本。在redis源码文件夹下的src目录下。redis-trib.rb
@@ -60,9 +60,9 @@
 
 `[root@jing src]# ll *.rb`
 
-	把redis-trib.rb文件复制到到redis-cluster目录下
-	
-	`[root@jing src]# cp redis-trib.rb /usr/local/redis-cluster/`
+把redis-trib.rb文件复制到到redis-cluster目录下
+
+`[root@jing src]# cp redis-trib.rb /usr/local/redis-cluster/`
 
 
 - 执行ruby脚本之前，需要安装ruby环境。
@@ -71,10 +71,10 @@
 
 `[root@jing ~]# yum install rubygems`
 
-	安装redis-trib.rb运行依赖的ruby的包。
-	
-	`[root@jing ~]# gem install redis-3.0.0.gem`
-	
+安装redis-trib.rb运行依赖的ruby的包。
+
+`[root@jing ~]# gem install redis-3.0.0.gem`
+
 
 - 启动所有的redis实例
 
