@@ -8,11 +8,16 @@
 5. `[root@jing redis-3.0.0]# make install PREFIX=/usr/local/redis`
 
 ###### 启动redis
-前端启动：`[root@jing redis-3.0.0]# ./redis-server`
+前端启动：
+
+`[root@jing redis-3.0.0]# ./redis-server`
 后台启动：
 1、复制redis.conf到redis的安装目录
+
 `[root@jing redis-3.0.0]# cp redis.conf /usr/local/redis/bin/`
+
 2、修改redis.conf。修改`daemonize yes`
+
 3、`[root@bogon redis]# ./redis-server redis.conf`
 
 ###### 客户端
