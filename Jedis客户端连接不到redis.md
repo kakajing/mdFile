@@ -25,5 +25,7 @@ redis.clients.jedis.exceptions.JedisConnectionException: java.net.SocketTimeoutE
 ```
 
 解决：由于linux的防火墙导致的无法连接到redis
+
 `[root@jing ~]# service iptables stop`
+
 结果显示操作redis正常
